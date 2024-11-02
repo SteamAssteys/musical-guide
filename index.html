@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam - Punkty Wymiany</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="standard_3.gif" type="image/x-icon"> <!-- Dodanie favicon -->
+</head>
+<body>
+    <!-- Sekcja animacji ładowania -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>Ładowanie...</p>
+    </div>
+
+    <div class="container" id="main-content" style="display: none;">
+        <!-- Nagłówek z zakładkami -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="https://discord.gg/tcrgBkyjVt" target="_blank">Discord</a></li>
+                </ul>
+            </nav>
+            <h1>Steam Punkty Wymiany</h1>
+            <p>Podaj link do swojego profilu Steam, aby sprawdzić ilość punktów.</p>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="profile-link" placeholder="Wklej link do profilu Steam">
+            <button onclick="checkPoints()">Sprawdź Punkty</button>
+        </div>
+        
+        <div id="result" class="result-section"></div>
+    </div>
+
+    <!-- Okienko modalne z informacjami -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeInfoModal()">×</span>
+            <h2>Informacje o stronie</h2>
+            <p>Strona została założona przez Jan Kowalski. Zapraszamy do korzystania!</p>
+        </div>
+    </div>
+
+    <!-- Stopka z informacjami o autorze, licencji i bazie -->
+    <footer>
+        <p>Strona stworzona przez Hentaii. Licencja: MIT-02223. Korzysta z bazy danych Steam/corp przeglądarki (Save/trade-asset).</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
